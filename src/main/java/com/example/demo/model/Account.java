@@ -1,10 +1,7 @@
 package com.example.demo.model;
 
 import ch.qos.logback.core.model.INamedModel;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -17,8 +14,11 @@ public class Account {
     private String username;
 
     private String password;
+    @OneToOne
+    private User user;
 
     public Account() {
+
     }
 
     public Account(Long id, String username, String password) {
