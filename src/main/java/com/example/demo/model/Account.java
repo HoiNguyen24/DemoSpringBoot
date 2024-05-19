@@ -17,6 +17,8 @@ public class Account {
     @OneToOne
     private User user;
 
+    private String role = "USER";
+
     public Account() {
 
     }

@@ -1,4 +1,8 @@
 package com.example.demo.service;
 
-public interface IAccountService {
+import com.example.demo.model.Account;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IAccountService extends IGenerateService<Account>{
+
 }
